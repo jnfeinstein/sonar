@@ -10,8 +10,13 @@ app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname+'/application.html'));
 });
 
+var socketCount = 0;
+
 io.on('connection', function(socket){
-  console.log(socket);
+  console.log('socket #' + socketCount++);
+  socket.on('position', function(position) {
+    console.log(position);
+  });
 });
 
 http.listen(3000);

@@ -1,7 +1,9 @@
 require('./cast');
+require('./utils');
 
 angular.module('sonar', [
   'cast',
+  'navigator',
   'ngRoute',
   'templates',
   'ui.bootstrap'

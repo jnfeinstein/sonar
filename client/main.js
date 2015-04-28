@@ -1,5 +1,4 @@
 require('./cast');
-require('./utils')
 
 angular.module('sonar', [
   'cast',
